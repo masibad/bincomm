@@ -1,0 +1,414 @@
+@import "./normalize.css";
+
+:root {
+  --color-primary: #ff008c;
+  --color-secondary: #a000c8;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: white;
+  background: rgb(255, 0, 140);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 140, 1) 65%,
+    rgba(160, 0, 200, 1) 100%
+  );
+  /* min-height: 100vh; */
+  /* position: relative; */
+  overflow-x: hidden;
+}
+
+/* The floating circle container--------------------------- */
+.bg-floating {
+  position: relative;
+  max-height: 100vh;
+  max-width: 80vw;
+}
+
+.floating-boxes {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* The Boxes */
+.floating-boxes li {
+  position: absolute;
+  list-style: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 64, 105, 0.45),
+    hsla(263, 64%, 39%, 0.45)
+  );
+  bottom: -80rem;
+  opacity: 0;
+  animation: floatingbox 25s linear infinite;
+}
+
+.floating-boxes li:nth-child(1) {
+  left: 25%;
+  height: 6rem;
+  width: 6rem;
+  animation-delay: 1s;
+  animation-duration: 15s;
+}
+
+.floating-boxes li:nth-child(2) {
+  left: 10%;
+  height: 2rem;
+  width: 2rem;
+  animation-delay: 4s;
+  animation-duration: 15s;
+}
+
+.floating-boxes li:nth-child(3) {
+  left: 65%;
+  height: 9rem;
+  width: 9rem;
+  animation-delay: 7s;
+  animation-duration: 10s;
+}
+
+.floating-boxes li:nth-child(4) {
+  left: 45%;
+  height: 6rem;
+  width: 6rem;
+  animation-delay: 7s;
+  animation-duration: 20s;
+}
+
+.floating-boxes li:nth-child(5) {
+  left: 55%;
+  height: 4.5rem;
+  width: 4.5rem;
+  animation-delay: 10s;
+  animation-duration: 18s;
+}
+
+.floating-boxes li:nth-child(6) {
+  left: 35%;
+  height: 7rem;
+  width: 7rem;
+  animation-delay: 10s;
+  animation-duration: 22s;
+}
+
+.floating-boxes li:nth-child(7) {
+  left: 15%;
+  height: 11rem;
+  width: 11rem;
+  animation-delay: 11s;
+  animation-duration: 7s;
+}
+
+.floating-boxes li:nth-child(8) {
+  left: 75%;
+  height: 10rem;
+  width: 10rem;
+  animation-delay: 11s;
+  animation-duration: 9s;
+}
+
+.floating-boxes li:nth-child(9) {
+  left: 85%;
+  height: 5rem;
+  width: 5rem;
+  animation-delay: 12s;
+  animation-duration: 8s;
+}
+
+.floating-boxes li:nth-child(10) {
+  left: 95%;
+  height: 5.5rem;
+  width: 5.5rem;
+  animation-delay: 13s;
+  animation-duration: 25s;
+}
+
+/* Key frame rule */
+@keyframes floatingbox {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-125rem) rotate(1080deg);
+    opacity: 1;
+  }
+}
+
+/* Floating End----------------------------------------------------- */
+
+/* Hero Block */
+.block-logo {
+  display: block;
+  margin-top: 10rem;
+}
+
+.logo-header .logo {
+  display: block;
+  width: 16rem;
+  margin: 0 auto 0 auto;
+}
+
+/* work & gallery */
+.wrapper {
+  max-width: 1200px;
+  margin: 3rem auto 2rem auto;
+}
+
+.wrapper nav {
+  display: flex;
+  justify-content: center;
+  margin: 1 auto;
+  /* filtering */
+}
+
+.wrapper .items {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+
+nav .items .item {
+  padding: 8px 20px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  border: 2px solid #fff;
+  white-space: nowrap;
+  /* flex-wrap: wrap; */
+  border-radius: 50px;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* .filter span:hover {
+  color: var(--color-primary);
+  background: #fff;
+} */
+
+nav .items .active,
+nav .items .item:hover {
+  color: var(--color-primary);
+  background: #fff;
+}
+
+.gallery {
+  display: grid;
+  grid-template: auto / 1fr;
+  padding: 2rem 4rem;
+  gap: 1.5rem;
+}
+
+.gallery .gallitem {
+  margin-top: -5px;
+  position: relative;
+  justify-content: center;
+}
+
+.gallery .gallitem img {
+  border-radius: 2px;
+  transition: 0.5s ease;
+}
+
+.gallery .gallitem img:hover {
+  filter: brightness(35%);
+}
+
+/* text overlay baru */
+
+@media only screen and (min-width: 600px) {
+  .gallery {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    padding: 2rem 4rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .gallery {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr;
+    padding: 2rem 4rem;
+  }
+}
+
+/* footer */
+.footer_container {
+  min-height: 100px;
+  height: 100%;
+  background: #111;
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+}
+
+.footer_container .footer_box {
+  max-width: 1100px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.footer_container .footer_logo {
+  display: grid;
+  width: 7rem;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0;
+}
+
+.gallery .gallitem.hide {
+  display: none;
+}
+
+.gallery .gallitem.show {
+  animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer_container .footer_logo {
+    width: 7rem;
+    padding: 5px;
+  }
+}
+
+.footer_box .footer_contact {
+  display: grid;
+  align-items: center;
+}
+
+.footer_contact .contact_items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_contact .contact_items {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0;
+    margin: 0 auto;
+  }
+
+  .footer_container .footer_logo {
+    margin: 0 3rem 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer_box .footer_contact {
+    display: grid;
+    justify-content: start;
+  }
+
+  .footer_contact .contact_items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 0 5px;
+    margin: 0;
+  }
+}
+
+.footer_contact .contact_title {
+  font-size: 2.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_contact span {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.footer_contact span i {
+  margin-right: 1rem;
+  font-size: 2.4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_contact span i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer_contact .contact_title {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer_contact span {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+}
+
+/* copyright */
+.copyright {
+  min-height: 4rem;
+  height: 100%;
+  background: #111;
+  margin: 0;
+  border-top: 1.5px solid var(--color-primary);
+}
+
+.copyright .footer_copyright {
+  padding: 1.5rem 0 15rem 0;
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+/* BG-floating circle */

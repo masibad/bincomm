@@ -404,7 +404,7 @@ nav .items .item:hover {
 }
 
 .copyright .footer_copyright {
-  padding: 1.5rem 0 15rem 0;
+  padding: 1.5rem 0 5rem 0;
   margin: 0;
   font-size: 1.4rem;
   color: var(--color-primary);

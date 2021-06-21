@@ -411,4 +411,23 @@ nav .items .item:hover {
   text-align: center;
 }
 
+@media screen and (min-width: 476px) {
+  .copyright .footer_copyright_sm {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 475px) {
+  .copyright .footer_copyright {
+    display: none;
+  }
+  .copyright .footer_copyright_sm {
+    padding: 1.5rem 0 5rem 0;
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+  }
+
 /* BG-floating circle */

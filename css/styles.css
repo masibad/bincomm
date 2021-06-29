@@ -365,6 +365,10 @@ nav .items .item:hover {
   padding: 0;
 }
 
+.footer_contact i.fa-envelope {
+  font-size: 2.2rem;
+}
+
 .footer_contact span {
   font-size: 1.6rem;
   margin-bottom: 0;
@@ -415,7 +419,7 @@ nav .items .item:hover {
   .copyright .footer_copyright_sm {
     display: none;
   }
-} 
+}
 
 @media screen and (max-width: 475px) {
   .copyright .footer_copyright {
@@ -428,6 +432,6 @@ nav .items .item:hover {
     color: var(--color-primary);
     text-align: center;
   }
-  }
+}
 
 /* BG-floating circle */

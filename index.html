@@ -95,9 +95,9 @@
           </a>
         </div>
 
-        <div class="gallitem anim-1" data-name="anim">
+        <div class="gallitem" data-name="anim">
           <a
-            href="https://vimeo.com/563184016"
+            href="https://www.youtube.com/watch?v=gU4Ym5haWwE"
             class="gallvid"
             title="Animation | Kalyanamitra - Sosialisasi Penanganan Kekerasan Seksual Terhadap Anak Perempuan Berperspektif Gender 2020"
             target="_blank"
@@ -119,7 +119,7 @@
 
         <div class="gallitem" data-name="anim">
           <a
-            href="https://vimeo.com/498617330"
+            href="https://www.youtube.com/watch?v=OvYTWr05yCI&t=9s"
             class="gallvid"
             title="Animation | Rahima - Sosialisasi 5 Prinsip Relasi Keluarga Bahagia 2020"
             target="_blank"
@@ -205,7 +205,7 @@
 
         <div class="gallitem" data-name="anim">
           <a
-            href="https://vimeo.com/561930677"
+            href="https://www.youtube.com/watch?v=ZdXyyo0Swlw&t=10s"
             class="gallvid"
             title="Video | Video Report - TTT Bank DKI 2020"
             target="_blank"
@@ -342,8 +342,38 @@
       //   Video
       $(".gallvid").magnificPopup({
         type: "iframe",
-        gallery: {
-          enabled: true,
+        iframe: {
+          markup:
+            '<div class="mfp-iframe-scaler">' +
+            '<div class="mfp-close"></div>' +
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+            "</div>", // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+          patterns: {
+            youtube: {
+              index: "youtube.com/", // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+              id: "v=", // String that splits URL in a two parts, second part should be %id%
+              // Or null - full URL will be returned
+              // Or a function that should return %id%, for example:
+              // id: function(url) { return 'parsed id'; }
+
+              src: "//www.youtube.com/embed/%id%?autoplay=1", // URL that will be set as a source for iframe.
+            },
+            vimeo: {
+              index: "vimeo.com/",
+              id: "/",
+              src: "//player.vimeo.com/video/%id%?autoplay=1",
+            },
+            gmaps: {
+              index: "//maps.google.",
+              src: "%id%&output=embed",
+            },
+
+            // you may add here more sources
+          },
+
+          srcAction: "iframe_src", // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
         },
       });
     </script>

@@ -31,17 +31,17 @@ window.onload = () => {
 };
 
 // Popup Magnific Gallery image
-$(".gallimg").magnificPopup({
-  type: "image",
-  gallery: {
-    enabled: false,
-  },
-});
+// $(".gallimg").magnificPopup({
+//   type: "image",
+//   gallery: {
+//     enabled: true,
+//   },
+// });
 
-Video;
-$(".gallvid").magnificPopup({
-  type: "iframe",
-  gallery: {
-    enabled: false,
-  },
-});
+// Video;
+// $(".gallvid").magnificPopup({
+//   type: "iframe",
+//   gallery: {
+//     enabled: false,
+//   },
+// });

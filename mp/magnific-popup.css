@@ -425,6 +425,6 @@ img.mfp-img {
     width: 100vw !important;
   }
   .mfp-container {
-    width: 100vw !important;
+    width: 100% !important;
   }
 }

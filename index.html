@@ -332,11 +332,17 @@
     <script src="mp/jquery.magnific-popup.min.js"></script>
     <script>
       // Popup Magnific Gallery image
+      /*
       $(".gallimg").magnificPopup({
         type: "image",
         gallery: {
           enabled: true,
         },
+      });
+      */
+
+      $(document).ready(function () {
+        $(".gallimg").magnificPopup({ type: "image" });
       });
 
       //   Video

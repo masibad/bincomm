@@ -246,7 +246,7 @@ nav .items .item:hover {
 
 .gallery .gallitem img {
   border-radius: 2px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .gallery .gallitem img:hover {

@@ -182,7 +182,7 @@ body {
 
 .logo-header .logo {
   display: block;
-  width: 16rem;
+  width: 32rem;
   margin: 0 auto 0 auto;
 }
 
@@ -289,9 +289,9 @@ nav .items .item:hover {
 
 .footer_container .footer_logo {
   display: grid;
-  width: 7rem;
+  width: 14rem;
   margin: 0 auto;
-  align-items: center;
+  align-items: baseline;
   padding: 0;
 }
 
@@ -314,14 +314,14 @@ nav .items .item:hover {
 
 @media screen and (max-width: 500px) {
   .footer_container .footer_logo {
-    width: 7rem;
+    width: 12rem;
     padding: 5px;
   }
 }
 
 .footer_box .footer_contact {
   display: grid;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .footer_contact .contact_items {

@@ -180,6 +180,12 @@ body {
   margin-top: 10rem;
 }
 
+@media screen and (max-width: 500px) {
+  .block-logo {
+    margin-top: 8rem;
+  }
+}
+
 .logo-header .logo {
   display: block;
   width: 24rem;
@@ -245,7 +251,7 @@ nav .items .item:hover {
 }
 
 .gallery .gallitem img {
-  border-radius: 2px;
+  border-radius: 10px;
   transition: 0.3s ease;
 }
 
@@ -342,7 +348,7 @@ nav .items .item:hover {
   }
 
   .footer_container .footer_logo {
-    margin: 0 3rem 0 auto;
+    margin: 0 1rem 0 auto;
   }
 }
 
